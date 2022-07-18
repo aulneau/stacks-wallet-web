@@ -87,8 +87,13 @@ function makeFiatProviderFaqUrl(address: string, provider: string) {
   return `https://hiro.so/wallet-faq/how-do-i-buy-stx-from-an-exchange?provider=${provider}&address=${address}`;
 }
 
-export function getProviderUrl(address: string, providerKey: string, providerName: string) {
-  switch (providerKey) {
+export function getProviderUrl(
+  address: string,
+  providerKey: string,
+  providerHasFastCheckoutProcess: boolean,
+  providerName: string
+) {
+  switch (providerHasFastCheckoutProcess && providerKey) {
     case ActiveFiatProviders.Coinbase:
       return makeCoinbaseUrl(address);
     case ActiveFiatProviders.MoonPay:

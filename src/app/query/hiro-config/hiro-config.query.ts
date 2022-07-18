@@ -35,7 +35,7 @@ interface HiroConfig {
   feeEstimationsMinMax?: FeeEstimationsConfig;
 }
 
-const DEFAULT_BRANCH = 'main';
+const DEFAULT_BRANCH = 'refactor/link-to-fiat-provider';
 const githubWalletConfigRawUrl = `https://raw.githubusercontent.com/${GITHUB_ORG}/${GITHUB_REPO}/${
   BRANCH_NAME ?? DEFAULT_BRANCH
 }/config/wallet-config.json`;
